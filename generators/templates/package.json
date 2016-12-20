@@ -1,0 +1,13 @@
+{
+  "name": "<%= name %>",
+  "version": "1.0.0",
+  "description": "<%= description %>",
+  "main": "index.js",
+  "scripts": {
+    "build": "cpx ./src/index.html dist && webpack",
+    "watch": "webpack --watch",
+    "test": "mocha-webpack --webpack-config ./test.webpack.config.js \"test/**/*.spec.js\"",
+    "coverage": "cross-env NODE_ENV=test nyc npm test"
+  },
+  "license": "ISC"
+}
